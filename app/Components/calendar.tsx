@@ -1,5 +1,6 @@
 'use client'; 
 import React, { useEffect } from 'react';
+import CalBuild from './CalBuild';
 
   // Arrays to hold months and days
 const listMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -75,31 +76,3 @@ const TableComp = () => {
           <tbody>{tableRows}</tbody>
     );
   }
-    
-  /* This blob determines the day of the week the 1st lands on, then numbers out the current month by iterating
-  the numbers in the calendar table */
-  function CalBuild() {
-      const nD = new Date();
-      nD.setDate(1);
-      const dayOfWeek = nD.getDay();
-      console.log(dayOfWeek);
-      const lastDay = new Date();
-      let y = lastDay.getMonth();
-      y++;
-      lastDay.setMonth(y);
-      lastDay.setDate(0);
-      console.log(lastDay);
-      let z = lastDay.getDate();
-      let x = dayOfWeek + z;
-      let a = 0;
-      for (let i = dayOfWeek; i < x; i++) {
-        a++;
-        const x1 = i.toString();
-        const parent = document.getElementById(x1);
-        const child = parent?.querySelector(".node-0");
-        child.textContent = a.toString();
-      };
-  };
-  
-
-
