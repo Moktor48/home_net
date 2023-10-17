@@ -16,6 +16,10 @@
   }
 }
 
+* {
+  color: yellow;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -27,6 +31,23 @@ body {
 }
 
 table {
+  border-width: 4px;
+  border-color: white; 
+  table-layout: fixed;
+  text-align: center;
+  color: yellow;
+}
+
+td {
+  border-width: 4px;
+  border-color: lightgrey;
+
+  text-align: right;
+  
+  color: yellow;
+}
+
+#calTable {
   border-width: 8px;
   border-color: white; 
   table-layout: fixed;
@@ -38,7 +59,7 @@ table {
   text-align: center;
 }
 
-td {
+#calTable td {
   border-width: 4px;
   border-color: lightgrey;
   width: 120px;
